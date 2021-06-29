@@ -13,7 +13,7 @@ import ChatWindow from './ChatWindow'
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('MyComponent', component);
+  Vue.component('ChatWindow', ChatWindow)
 }
 
 
