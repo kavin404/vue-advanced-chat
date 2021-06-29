@@ -1,12 +1,21 @@
 import ChatWindow from './ChatWindow'
 
-Object.defineProperty(ChatWindow, 'install', {
-	configurable: false,
-	enumerable: false,
-	value(Vue) {
-		Vue.component('ChatWindow', ChatWindow)
-	}
-})
+// Object.defineProperty(ChatWindow, 'install', {
+// 	configurable: false,
+// 	enumerable: false,
+// 	value(Vue) {
+// 		Vue.component('ChatWindow', ChatWindow)
+// 	}
+// })
+
+
+// Declare install function executed by Vue.use()
+export function install(Vue) {
+	if (install.installed) return;
+	install.installed = true;
+	Vue.component('MyComponent', component);
+}
+
 
 
 // Create module definition for Vue.use()
